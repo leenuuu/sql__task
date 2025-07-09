@@ -1,0 +1,39 @@
+CREATE TABLE employee (
+    id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    date_of_birth DATE,
+    email VARCHAR(100),
+    enrollment_date DATE
+);
+select * from employee
+
+INSERT INTO employee (id, first_name, last_name, date_of_birth, email, enrollment_date) VALUES
+(1, 'Alice', 'Smith', '2002-05-14', 'alice.smith@example.com', '2023-09-01'),
+(2, 'Bob', 'Johnson', '2001-11-22', 'bob.johnson@example.com', '2024-01-15'),
+(3, 'Carol', 'Williams', '2003-03-30', 'carol.williams@example.com', '2025-02-10'),
+(4, 'David', 'Brown', '2002-07-19', 'david.brown@example.com', '2022-08-20'),
+(5, 'Eva', 'Jones', '2004-01-05', 'eva.jones@example.com', '2024-06-12'),
+(6, 'Frank', 'Garcia', '2003-09-17', 'frank.garcia@example.com', '2023-11-25'),
+(7, 'Grace', 'Martinez', '2001-12-28', 'grace.martinez@example.com', '2025-03-18'),
+(8, 'Henry', 'Rodriguez', '2002-04-09', 'henry.rodriguez@example.com', '2024-05-30'),
+(9, 'Ivy', 'Lee', '2003-10-23', 'ivy.lee@example.com', '2022-12-05'),
+(10, 'Jack', 'Walker', '2004-06-11', 'jack.walker@example.com', '2023-07-22');
+
+select * from employee
+--update 
+UPDATE employee
+SET last_name = 'Johnston', enrollment_date = '2025-01-01'
+WHERE id = 6;
+select * from employee
+
+--drop
+ALTER TABLE employee
+DROP COLUMN email;
+select * from employee
+---delete
+drop table employee
+select * from employee
+rollback
+select * from employee;
+

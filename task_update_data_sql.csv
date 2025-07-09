@@ -1,0 +1,78 @@
+CREATE TABLE students (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    date_of_birth DATE,
+    email VARCHAR(100) UNIQUE,
+    enrollment_date DATE DEFAULT CURRENT_DATE
+);
+SELECT * FROM students;
+INSERT INTO students (first_name, last_name, date_of_birth, email, enrollment_date) 
+VALUES ('Prem', 'Awaze', '2003-05-13', 'premawaze@gmail.com', '2025-07-08');
+SELECT * FROM students;
+INSERT INTO students (first_name, last_name, date_of_birth, email, enrollment_date) 
+VALUES ('John', 'Doe', '2002-08-15', 'johndoe@gmail.com', '2025-07-08');
+SELECT * FROM students;
+INSERT INTO students (first_name, last_name, date_of_birth, email, enrollment_date) VALUES
+('Prerna', 'Awazeee', '2009-03-13', 'prernawazeee@gmail.com', '2028-03-08'),
+('Sara', 'Smith', '2002-11-21', 'sara.smith@example.com', '2024-06-01'),
+('John', 'Doe', '2001-03-15', 'john.doe@example.com', '2023-09-15'),
+('Emily', 'Johnson', '2004-07-30', 'emily.johnson@example.com', '2024-01-10'),
+('Michael', 'Brown', '2003-12-05', 'michael.brown@example.com', '2022-02-20'),
+('Linda', 'Davis', '2002-06-18', 'linda.davis@example.com', '2026-09-05'),
+('David', 'Wilson', '2001-09-09', 'david.wilson@example.com', '2022-03-12'),
+('Sophia', 'Martinez', '2004-02-22', 'sophia.martinez@example.com', '2024-01-25'),
+('James', 'Anderson', '2003-10-11', 'james.anderson@example.com', '2022-06-30'),
+('Olivia', 'Thomas', '2002-04-27', 'olivia.thomas@example.com', '2022-11-18');
+
+SELECT * FROM students;
+
+INSERT INTO students (first_name, last_name, date_of_birth, email, enrollment_date) VALUES
+('Ethan', 'Clark', '2003-08-14', 'ethan.clark@example.com', '2024-10-12'),
+('Ava', 'Lewis', '2001-12-22', 'ava.lewis@example.com', '2023-12-01'),
+('Mason', 'Walker', '2002-03-19', 'mason.walker@example.com', '2024-02-15'),
+('Isabella', 'Hall', '2004-05-25', 'isabella.hall@example.com', '2025-03-20'),
+('Logan', 'Young', '2003-07-17', 'logan.young@example.com', '2024-05-08'),
+('Mia', 'King', '2002-10-03', 'mia.king@example.com', '2023-10-22'),
+('Lucas', 'Wright', '2001-11-29', 'lucas.wright@example.com', '2024-04-18'),
+('Charlotte', 'Lopez', '2004-01-12', 'charlotte.lopez@example.com', '2025-06-05'),
+('Benjamin', 'Hill', '2003-04-08', 'benjamin.hill@example.com', '2024-07-14'),
+('Amelia', 'Scott', '2002-08-26', 'amelia.scott@example.com', '2023-12-28');
+select * from students;
+
+---update
+select * from students
+
+UPDATE students
+SET first_name = 'leena', last_name = 'yenkar'
+WHERE id = 1;
+select * from students
+---query2
+UPDATE students
+SET last_name='deore',email='johndoe@gmail.com'
+WHERE id = 2;
+select * from students
+---query3
+update students
+set enrollment_date='2023-09-15',last_name='Doen'
+where id =5;
+select * from students 
+---query4
+select * from students
+ update students
+ set first_name='gunjan' where email='sara.smith@example.com';
+ select * from students
+ ----query5
+ select * from students
+ select * from students where id = '4' or id = '10'
+select * from students
+
+
+ 
+ 
+
+
+
+
+
+
